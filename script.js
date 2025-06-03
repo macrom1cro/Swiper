@@ -7,13 +7,17 @@ function initSlider() {
   if (sliderInit) return;
 
   swiper = new Swiper(".swiper", {
-    loop: true,
-    pagination: { el: ".swiper-pagination" },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    // loop: true,
+    // autoHeight: true,
+    // centerInsufficientSlides: true,
+    effect: "coverflow",
+    coverflowEffect: {
+      rotate: 30,
+      slideShadows: false,
     },
-    scrollbar: { el: ".swiper-scrollbar" },
+    autoplay: { delay: 5000 },
+    // centeredSlides: true,
+    pagination: { el: ".swiper-pagination" },
   });
 
   sliderInit = true;
