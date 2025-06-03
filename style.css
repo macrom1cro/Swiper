@@ -1,0 +1,110 @@
+:root {
+  --paleBackground: #ffffff;
+  --white: #f8f8f8;
+  --whiteButton: #eaeaea;
+  --grey: #7e7e82;
+  --black: #1b1c21;
+  --superLightTurquoise: #d9fff5;
+  --lightTurquoise: #b8ffec;
+  --turquoise: #41f6d7;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("./fonts/TTLakes-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("./fonts/TTLakes-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("./fonts/TTLakes-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("./fonts/TTLakes-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 320px;
+  background: var(--white);
+  min-height: 100vh;
+  font-family: "TT Lakes";
+  color: var(--black);
+}
+.swiper {
+  min-width: 320px;
+  height: 300px;
+}
+.slide {
+  width: 240px;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.lenovo {
+  background-image: "/lenovo";
+}
+.dropdown {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-image: url("/dropdown.svg");  
+}
+.header {
+  height: 56px;
+  background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  /* gap: 16px; */
+  padding-left: 16px;
+}
+.header__title {
+  /* font-family: TT Lakes; */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+.main {
+  height: 266px;
+  /* background: #F8F8F8; */
+}
+@media (max-width: 320px) {
+  .header {
+    height: 80px;
+    /* background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%); */
+  }
+  .main {
+    height: 154px;
+  }
+  .slide {
+    width: 240px;
+    height: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    width: 224px;
+    height: 72px;
+  }
+}
