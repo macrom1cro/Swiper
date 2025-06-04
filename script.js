@@ -7,7 +7,14 @@ function initSlider() {
   if (sliderInit) return;
 
   swiper = new Swiper(".swiper", {
+    // a11y: {
+    //   prevSlideMessage: "Previous slide",
+    //   nextSlideMessage: "Next slide",
+    // },
     slidesPerView: 1.5,
+    grid: {
+      rows: 1,
+    },
     // loop: true,
     // autoHeight: true,
     // centerInsufficientSlides: true,
@@ -27,7 +34,7 @@ function initSlider() {
     spaceBetween: 16,
     // height: 300,
     pagination: { el: ".swiper-pagination", clickable: true },
-    enabled: true,
+    // enabled: true,
   });
 
   sliderInit = true;

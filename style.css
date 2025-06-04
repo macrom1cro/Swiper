@@ -49,16 +49,18 @@ body {
 }
 .swiper{
   /* min-height: 200px; */
-  min-width: 300px;
+  /* min-width: 300px; */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 16px;
 }
-.swiper-slide {
-  min-width: 320px;
+.sdsdsd {
+  /* min-width: 320px; */
   /* height: 300px; */
   /* width: 240px; */
-  min-height: 126px;
+  min-height: 400px;
+  min-width: 400px;
+  /* min-height: 126px; */
   
   /* text-align: center; */
   display: flex;
