@@ -7,34 +7,10 @@ function initSlider() {
   if (sliderInit) return;
 
   swiper = new Swiper(".swiper", {
-    // a11y: {
-    //   prevSlideMessage: "Previous slide",
-    //   nextSlideMessage: "Next slide",
-    // },
-    slidesPerView: 1.5,
-    grid: {
-      rows: 1,
-    },
-    // loop: true,
-    // autoHeight: true,
-    // centerInsufficientSlides: true,
-    // effect: "coverflow",
-    // coverflowEffect: {
-    //   rotate: 30,
-    //   slideShadows: false,
-    // },
-    // autoplay: { delay: 5000 },
-    // centeredSlides: true,
-    // width: 340,
-    // effect: "coverflow",
-    // coverflowEffect: {
-    //   rotate: 30,
-    //   slideShadows: false,
-    // },
+    slidesPerView: 1.2,
+    slidesOffsetBefore: 16,
     spaceBetween: 16,
-    // height: 300,
     pagination: { el: ".swiper-pagination", clickable: true },
-    // enabled: true,
   });
 
   sliderInit = true;
