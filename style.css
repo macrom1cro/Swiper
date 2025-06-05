@@ -7,6 +7,9 @@
   --superLightTurquoise: #d9fff5;
   --lightTurquoise: #b8ffec;
   --turquoise: #41f6d7;
+  --swiper-pagination-color: #b5b6bc;
+  --swiper-pagination-bullet-inactive-color: #dddddd;
+  --swiper-pagination-bullet-inactive-opacity: 1;
 }
 @font-face {
   font-family: "TT Lakes";
@@ -39,44 +42,11 @@
 }
 body {
   min-width: 320px;
-  background: var(--white);
   min-height: 100vh;
   font-family: "TT Lakes";
   color: var(--black);
 }
 
-.card {
-  width: 240px;
-  height: 72px;
-  display: flex;
-  justify-content: center;
-  border-radius: 6px;
-  border-width: 1px;
-  border: 1px solid var(--whiteButton);
-  background-color: var(--paleBackground);
-}
-.card__container {
-  width: 208px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.lenovo {
-  width: 108px;
-  height: 32px;
-  background-size: cover;
-  background-image: url("/lenovo.svg");
-}
-.button__dropdown {
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 20px;
-  background-size: cover;
-  cursor: pointer;
-  background-image: url("/dropdown.svg");
-}
 .header {
   height: 56px;
   background: linear-gradient(
@@ -84,11 +54,11 @@ body {
     var(--white) 0%,
     var(--paleBackground) 100%
   );
+  padding-left: 24px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: start;
-  padding-left: 16px;
 }
 .header__title {
   font-weight: 400;
@@ -99,46 +69,162 @@ body {
   color: var(--grey);
 }
 .main {
-  height: 266px;
-  background: rgb(248, 248, 248);
+  background: var(--white);
+}
+
+#slide {
+  max-width: 224px;
+}
+.card {
+  width: 224px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  border-width: 1px;
+  border: 1px solid var(--whiteButton);
+  background-color: var(--paleBackground);
+}
+
+.card__container {
+  width: 192px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.lenovo {
+  width: 108px;
+  height: 32px;
+  background-size: cover;
+  background: url("./blocks/card/lenovo.svg");
+}
+.samsung {
+  width: 116px;
+  height: 38px;
+  background-size: con;
+  background: url("./blocks/card/samsung.svg");
+}
+.apple {
+  width: 44px;
+  height: 44px;
+  background-size: cover;
+  background: url("./blocks/card/apple.svg");
+}
+.bosch {
+  width: 128px;
+  height: 29px;
+  background-size: cover;
+  background: url("./blocks/card/bosch.svg");
+}
+.hp {
+  width: 52px;
+  height: 52px;
+  background-size: cover;
+  background: url("./blocks/card/hp.svg");
+}
+.acer {
+  width: 92px;
+  height: 24px;
+  background-size: cover;
+  background: url("./blocks/card/acer.svg");
+}
+.view-sonic {
+  width: 128px;
+  height: 21px;
+  background-size: cover;
+  background: url("./blocks/card/viewSonic.svg");
+}
+.sony {
+  width: 128px;
+  height: 26px;
+  background-size: cover;
+  background: url("./blocks/card/sony.svg");
+}
+.button__dropdown {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-size: cover;
+  cursor: pointer;
+  background: url("./blocks/button/dropdown.svg");
+}
+
+.line {
+  display: none;
+}
+#pagination {
+  display: none;
 }
 
 @media (max-width: 320px) {
-  :root {
-    --swiper-pagination-color: #b5b6bc;
-    --swiper-pagination-bullet-inactive-color: #dddddd;
-    --swiper-pagination-bullet-inactive-opacity: 1;
-  }
   .header {
     height: 80px;
-    /* background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%); */
+    padding-left: 16px;
   }
-  .main {
-    height: 154px;
-  }
-  .card {
-    width: 240px;
-    height: 72px;
-  }
+
   #swiper {
     min-height: 142px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
-  #wrapper {
-    z-index: 10000;
-    box-shadow: inset -10px 0px 10px -5px rgba(248, 248, 248, 1);
-  }
+  /* #wrapper {
+    display: flex;
+    
+  } */
+
   #slide {
     max-width: 240px;
   }
+  .card {
+    width: 240px;
+  }
+  .line {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 82px;
+    top: 10px;
+    right: 0;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+    z-index: 10000;
+  }
   #pagination {
+    display: block;
     position: static;
   }
 }
+@media (min-width: 321px) {
+  #swiper {
+    padding-top: 16px;
+    max-height: 176px;
+    overflow: hidden;
+  }
+  #wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+    /* justify-content: center; */
+    gap: 16px 24px;
+  }
+}
+/* @media (min-width: 768px) {
+  .header {
+    height: 56px;
+    padding-left: 24px;
+  }
+  .swiper-wrapper {
+    display: grid;
+    grid-template-columns: 150px auto 40%;
+  }
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .card {
     width: 224px;
     height: 72px;
@@ -146,4 +232,4 @@ body {
   .card__container {
     width: 196px;
   }
-}
+} */

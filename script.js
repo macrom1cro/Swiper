@@ -7,14 +7,15 @@ function initSlider() {
   if (sliderInit) return;
 
   swiper = new Swiper(".swiper", {
-    slidesPerView: 1.2,
+    slidesPerView: 'auto',
     slidesOffsetBefore: 16,
+    slidesOffsetAfter: 16,
+    centeredSlides: false,
     spaceBetween: 16,
     pagination: { el: ".swiper-pagination", clickable: true },
   });
 
   sliderInit = true;
-  console.log("Slider initialized");
 }
 
 function destroySlider() {
@@ -25,8 +26,6 @@ function destroySlider() {
   // Дополнительно: возвращаем слайдер в исходное состояние
   swiper = null;
   sliderInit = false;
-
-  console.log("Slider destroyed");
 }
 
 function checkWidth() {
