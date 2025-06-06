@@ -7,12 +7,12 @@ function initSlider() {
   if (sliderInit) return;
 
   swiper = new Swiper(".swiper", {
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     slidesOffsetBefore: 16,
     slidesOffsetAfter: 16,
     centeredSlides: false,
-    spaceBetween: 16,
-    pagination: { el: ".swiper-pagination", clickable: true },
+    spaceBetween: 16,    
+    pagination: { el: ".swiper-pagination", clickable: true  },
   });
 
   sliderInit = true;
@@ -36,8 +36,21 @@ function checkWidth() {
 let resizeTimeout;
 function handleResize() {
   clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(checkWidth, 100);
+  resizeTimeout = setTimeout(checkWidth, 30);
 }
 
 window.addEventListener("load", checkWidth);
 window.addEventListener("resize", handleResize);
+
+document.querySelectorAll(".about__read-more").forEach(
+  btn =>
+    (btn.onclick = e => {
+      const s = e.target.previousElementSibling;
+      btn.lastElementChild.textContent = s.classList.toggle("active")
+        ? "Свернуть"
+        : "Показать все";
+      e.target
+        .closest(".about__read-more")
+        .previousElementSibling.classList.toggle("active");
+    })
+);
