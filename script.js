@@ -47,7 +47,7 @@ document.querySelectorAll(".about__read-more").forEach(
     (btn.onclick = e => {
       const s = e.target.previousElementSibling;
       btn.lastElementChild.textContent = s.classList.toggle("active")
-        ? "Свернуть"
+        ? "Скрыть"
         : "Показать все";
       e.target
         .closest(".about__read-more")

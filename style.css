@@ -207,6 +207,8 @@ body {
   .main {
     min-height: 266px;
     padding: 0 24px 34px;
+    display: grid;
+    justify-content: space-evenly;
   }
   #swiper {
     padding: 24px 0;
@@ -219,7 +221,6 @@ body {
     max-height: max-content !important;
   }
   #wrapper {
-    /* align-self: center; */
     display: grid;
     grid-template-columns: repeat(3, 224px);
     justify-items: center;
@@ -261,7 +262,6 @@ body {
   }
 
   .read-more__text {
-    width: 133px;
     height: 24px;
     font-weight: 500;
     font-size: 16px;
