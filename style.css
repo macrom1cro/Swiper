@@ -186,7 +186,7 @@ body {
     position: absolute;
     width: 24px;
     height: 82px;
-    top: 10px;
+    top: -5px;
     right: 0;
     background: linear-gradient(
       270deg,
