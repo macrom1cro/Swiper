@@ -1,7 +1,7 @@
 // Объявляем переменную swiper в глобальной области видимости
 let swiper;
 let sliderInit = false;
-const mediaSize = 320;
+const mediaSize = 767;
 
 function initSlider() {
   if (sliderInit) return;
