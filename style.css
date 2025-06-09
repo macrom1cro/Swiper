@@ -208,7 +208,7 @@ body {
     min-height: 266px;
     padding: 0 24px 34px;
     display: grid;
-    justify-content: space-evenly;
+    justify-content: start;
   }
   #swiper {
     padding: 24px 0;
@@ -243,8 +243,6 @@ body {
     border-radius: 5px;
     font-size: 16px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-start;
     gap: 8px;
   }
 
